@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './nav.scss';
 
-class App extends Component {
+class Nav extends Component {
   render() {
     return (
         <nav className="navigation">
@@ -17,4 +17,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Nav;

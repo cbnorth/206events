@@ -1,0 +1,18 @@
+@import '../settings/mixins';
+
+.service {
+    display: flex;
+    flex-direction: column-reverse;
+    @include breakpoint(med) {
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+	}
+}
+
+.service-copy, .service-image {
+    width: 100%;
+    @include breakpoint(med) {
+        width: 50%;
+	}
+}
