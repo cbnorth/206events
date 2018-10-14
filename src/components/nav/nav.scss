@@ -1,16 +1,34 @@
+@import "../../settings/settings";
+
 .navigation {
-    background-color: #000;
+    background-color: $dark-background;
     color: #fff;
     width: 100%;
     padding: 15px 0;
+}
 
+.sticky {
+    z-index: 999;
+}
+
+.menu-items {
     ul {
         display: flex;
         justify-content: space-evenly;
         max-width: 800px;
         margin: auto;
-        li {
-            display: inline;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @include breakpoint(sm) {
+            font-size: 20px;
+        }
+
+        &.current {
+            color: $highlight-color;
         }
     }
 }

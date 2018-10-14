@@ -1,19 +1,63 @@
-p {
-    margin: 0;
-    padding: 0;
-}
+@import "./settings/settings";
 
-.App-header {
-    background-color: blue;
-    color: #fff;
-    position: relative;
-
-    p {
-        margin-bottom: 500px;
-    }
+section {
+    padding: 40px 0;
+    color: $dark-font-color;
 }
 
 .content-container {
-  margin: auto;
-  max-width: 1280px;
+    margin: auto;
+    max-width: 1280px;
+    padding: 0 10px;
+}
+
+.two-column-text {
+    max-width: 600px;
+
+    p {
+        padding-bottom: 10px;
+        margin: auto;
+    }
+
+    @include breakpoint(sm) {
+        display: flex;
+        p {
+            width: 50%;
+        }
+	}
+}
+
+.centered-text p {
+    max-width: 600px;
+    text-align: center;
+    padding: 40px 0;
+    margin: auto;
+}
+
+.no-padding {
+    padding: 0;
+
+    .content-container {
+        padding: 0;
+    }
+}
+
+.dark-background {
+    background-color: $dark-background;
+    color: $light-font-color;
+}
+
+.med-background {
+    background: #8a597a;
+    background: -moz-linear-gradient(-45deg, #8a597a 0%, #5e417e 100%);
+    background: -webkit-linear-gradient(-45deg, #8a597a 0%,#5e417e 100%);
+    background: linear-gradient(135deg, #8a597a 0%,#5e417e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a597a', endColorstr='#5e417e',GradientType=1 );
+    color: $light-font-color;
+}
+
+.contact {
+    h1 {
+        text-align: center;
+    }
 }

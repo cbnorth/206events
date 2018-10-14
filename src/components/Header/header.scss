@@ -1,0 +1,24 @@
+@import '../../settings/mixins';
+
+.header {
+    background-color: blue;
+    color: #fff;
+    position: relative;
+    background-image: url(../../images/lockup.jpg);
+    background-size: cover;
+}
+
+.logo {
+    width: 275px;
+    height: 300px;
+    background-color:rgba(14, 18, 31, .75);
+    margin: auto;
+
+    @include breakpoint(sm) {
+        height: 375px;
+    }
+
+    @include breakpoint(med) {
+        height: 450px;
+	}
+}

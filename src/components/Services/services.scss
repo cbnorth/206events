@@ -1,11 +1,11 @@
-@import '../settings/mixins';
+@import '../../settings/mixins';
 
 .service {
     display: flex;
     flex-direction: column-reverse;
-    @include breakpoint(med) {
+    @include breakpoint(sm) {
         flex-direction: row;
-        &:nth-child(odd) {
+        &:nth-child(even) {
             flex-direction: row-reverse;
         }
 	}
@@ -13,7 +13,36 @@
 
 .service-copy, .service-image {
     width: 100%;
-    @include breakpoint(med) {
+    @include breakpoint(sm) {
         width: 50%;
 	}
+}
+
+.service-copy {
+    p {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+
+    @include breakpoint(med) {
+        display: flex;
+        p {
+            display: inline-block;
+            width: 50%;
+            padding-right: 5px;
+        }
+        p:nth-child(2) {
+            display: inline-block;
+            padding-left: 5px;
+            padding-right: 0;
+        }
+    }
+}
+
+.service-image {
+    img {
+        width: 100%;
+        padding: 0;
+    }
 }

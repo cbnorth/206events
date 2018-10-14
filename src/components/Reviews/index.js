@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import './reviews.scss';
 
 export default class Reviews extends Component {
     render() {
@@ -21,17 +22,18 @@ export default class Reviews extends Component {
         };
 
         return (
-            <div className="content-container">
-                <h1>Reviews</h1>
+            <div className="content-container centered-text">
                 <Slider {...settings}>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra auctor mauris. Sed euismod sapien a sapien cursus congue. Nam tempus euismod sapien et sodales. Sed bibendum quam non mattis porta. Sed fermentum lacus sit amet velit scelerisque, a molestie tellus vulputate. </p>
+                        <p className="review">We really appreciated how well Troy read the room and chose tracks perfect for whatever was going on--he even caught notice of us having our first look while he was setting up, and played our first dance song for us then—it was such a wonderful way to add even more magic to the moment! After our wedding, he provided us with a Spotify playlist of all of the songs he used—we can now enjoy our wedding's music whenever we want. Really can't recommend Troy highly enough—total pro and a real class act.<br/>
+                        <em>Samantha & David, Married August 2016</em>
+                        </p>
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra auctor mauris. Sed euismod sapien a sapien cursus congue. Nam tempus euismod sapien et sodales. Sed bibendum quam non mattis porta. Sed fermentum lacus sit amet velit scelerisque, a molestie tellus vulputate. </p>
+                        <p className="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra auctor mauris. Sed euismod sapien a sapien cursus congue. Nam tempus euismod sapien et sodales. Sed bibendum quam non mattis porta. Sed fermentum lacus sit amet velit scelerisque, a molestie tellus vulputate. </p>
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra auctor mauris. Sed euismod sapien a sapien cursus congue. Nam tempus euismod sapien et sodales. Sed bibendum quam non mattis porta. Sed fermentum lacus sit amet velit scelerisque, a molestie tellus vulputate. </p>
+                        <p className="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra auctor mauris. Sed euismod sapien a sapien cursus congue. Nam tempus euismod sapien et sodales. Sed bibendum quam non mattis porta. Sed fermentum lacus sit amet velit scelerisque, a molestie tellus vulputate. </p>
                     </div>
                 </Slider>
             </div>

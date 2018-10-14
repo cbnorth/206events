@@ -1,0 +1,47 @@
+@import '../../settings/settings';
+
+.recommended-pros {
+    max-width: 900px;
+    margin: auto;
+
+    h1 {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .pro {
+        margin-bottom: 10px;
+    }
+    h3, p {
+        font-family: $primary-font;
+        color: #fff;
+    }
+    h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        a {
+            color: #fff;
+        }
+    }
+
+    @include breakpoint(med) {
+        .pros-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        p {
+            display: inline;
+            font-size: 12px;
+        }
+
+        .pro {
+            width:300px;
+            padding: 0 8px;
+            margin-bottom: 25px;
+            text-align: center;
+            flex: 1 0 33%;
+        }
+	}
+}
+

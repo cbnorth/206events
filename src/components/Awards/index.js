@@ -4,9 +4,8 @@ class Awards extends Component {
     render() {
         return (
             <div className="awards">
-                <div className="content-container">
-                    <h1>Awards</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra auctor mauris. Sed euismod sapien a sapien cursus congue. Nam tempus euismod sapien et sodales. Sed bibendum quam non mattis porta. Sed fermentum lacus sit amet velit scelerisque, a molestie tellus vulputate.</p>
+                <div className="content-container centered-text">
+                    <p>206 Events is proud to have been awarded WeddingWire's Couples Choice Awards for our exceptional service and customer ratings for the past 4 years in a row. Thank you to all of our clients who helped us reach this achievement!</p>
                 </div>
             </div>
         );

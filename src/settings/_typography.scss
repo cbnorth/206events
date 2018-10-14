@@ -1,0 +1,40 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+// $bodyCopyColor: $midnight-darker;
+
+$josefinSans: 'Josefin Sans';
+$openSans: 'Open Sans';
+
+$primary-font: $openSans, sans-serif;
+$secondary-font: $josefinSans, sans-serif;
+
+body {
+	font-family: $primary-font;
+
+	h1, h2, h3, h4 {
+		font-family: $secondary-font;
+	}
+}
+
+
+
+
+// %tertiaryHeader {
+// 	font-family: $secondary-font;
+// 	font-weight: 700;
+// 	font-size: 17.4px;
+// 	line-height: 1.2;
+// 	text-transform: uppercase;
+// 	color: $bodyCopyColor;
+// }
+
+// %tertiaryHeader--light {
+// 	font-family: $secondary-font;
+// 	font-weight: 400;
+// 	font-size: 17.4px;
+// 	line-height: 1.2;
+// 	text-transform: uppercase;
+// 	color: $bodyCopyColor;
+// }

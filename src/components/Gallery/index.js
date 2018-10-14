@@ -26,7 +26,6 @@ class Gallery extends Component {
 
         return (
             <div className="content-container">
-                <h1> Gallery</h1>
                 <Slider {...settings}>
                     <div className="slide"><img src="https://i.ytimg.com/vi/_tHk20IR7MQ/maxresdefault.jpg" /></div>
                     <div className="slide"><img src="https://i.ytimg.com/vi/_tHk20IR7MQ/maxresdefault.jpg" /></div>
