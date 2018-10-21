@@ -1,11 +1,19 @@
 @import '../../settings/mixins';
 
+@keyframes panAndZoom {
+    100% {
+        background-size: 128%;
+    }
+  }
+
+
 .header {
     background-color: blue;
     color: #fff;
     position: relative;
+    background-size: 100%;
     background-image: url(../../images/lockup.jpg);
-    background-size: cover;
+    animation: panAndZoom 60s infinite;
 }
 
 .logo {

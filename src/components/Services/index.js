@@ -20,6 +20,9 @@ class Services extends Component {
 
         return (
             <div>
+                <div className="services-list">
+                    Service icons
+                </div>
                 <MediaQuery query="(max-width: 767px)">
                     <Slider {...settings}>
                         <ServiceWeddings />

@@ -1,5 +1,9 @@
 @import '../../settings/mixins';
 
+.services-list {
+    height: 200px;
+}
+
 .service {
     display: flex;
     flex-direction: column-reverse;
