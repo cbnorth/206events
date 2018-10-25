@@ -11,16 +11,14 @@
 }
 
 .menu-items {
-    ul {
-        display: flex;
-        justify-content: space-evenly;
-        max-width: 800px;
-        margin: auto;
-        height: 35px;
-        align-items: center;
-        @include breakpoint(sm) {
-            height: 60px;
-        }
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 800px;
+    margin: auto;
+    height: 35px;
+    align-items: center;
+    @include breakpoint(sm) {
+        height: 60px;
     }
     a {
         color: #fff;

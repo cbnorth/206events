@@ -1,68 +1,81 @@
 import React, { Component } from 'react';
 import './nav.scss';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import Scrollspy from 'react-scrollspy';
+// import Scrollspy from 'react-scrollspy';
 import MediaQuery from 'react-responsive'
 
 const SERVICESNAV = "services & events"
 
-const Menu = ({ items, className, onClick }) => (
+const Menu = ({ items, className, onClick, currentNav }) => (
   <div className={className}>
-    <Scrollspy items={items} currentClassName="current" offset={ 510 }>
-      {items.map((item, i) => {
-        let navItem = (item === SERVICESNAV || item === "services") ? "events-services" : item;
-        return <AnchorLink href={`#${navItem}`} key={i} onClick={onClick} offset='50'>{item}</AnchorLink>
-      })
-      }
-    </Scrollspy>
+    {items.map((item, i) => {
+      let navItem = (item === SERVICESNAV || item === "services") ? "events-services" : item;
+      return <AnchorLink className={currentNav === navItem && "current"} href={`#${navItem}`} key={i} onClick={onClick} offset='50'>{item}</AnchorLink>
+    })
+    }
   </div >
 )
 
-function getOffset( el ) {
+function getOffset(el) {
   var _x = 0;
   var _y = 0;
-  while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-      _x += el.offsetLeft - el.scrollLeft;
-      _y += el.offsetTop - el.scrollTop;
-      el = el.offsetParent;
+  while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+    _x += el.offsetLeft - el.scrollLeft;
+    _y += el.offsetTop - el.scrollTop;
+    el = el.offsetParent;
   }
   return { top: _y, left: _x };
 }
 
+let events;
+let reviews;
+let gallery;
+let contact;
+
 class Nav extends Component {
-  componentDidMount(){
-    const events = getOffset( document.getElementById('events-services') ).top;
-    const reviews = getOffset( document.getElementById('reviews') ).top;
-    const gallery = getOffset( document.getElementById('gallery') ).top;
-    const contact = getOffset( document.getElementById('contact') ).top;
-    console.log(events, reviews, gallery, contact);
+  state = {
+    activeClass: null,
+  }
+  componentDidMount() {
     let highlightMenuItem;
+    this.getOffsets();
+    window.addEventListener("resize", this.getOffsets);
     window.addEventListener('scroll', (event) => {
-      console.log(window.scrollY);
-      switch(window.scrollY) {
-        case events:
-            highlightMenuItem = 'foo'
-            break;
-        case reviews:
-            highlightMenuItem = 'bar'
-            break;
-        default:
-            highlightMenuItem = 'foobar'
+      if (window.scrollY >= events && window.scrollY < reviews) {
+        highlightMenuItem = "events-services"
+      } else if (window.scrollY >= reviews && window.scrollY < gallery) {
+        highlightMenuItem = "reviews"
+      } else if (window.scrollY >= gallery && window.scrollY < contact) {
+        highlightMenuItem = "gallery"
+      } else if (window.scrollY > contact) {
+        highlightMenuItem = "contact"
       }
-       this.setState({
-          activeClass: highlightMenuItem,
-       });
-    });
+      this.setState({
+        activeClass: highlightMenuItem,
+      });
+    })
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', false);
+    window.removeEventListener('resize', false);
+  }
+
+  getOffsets = () => {
+    events = getOffset(document.getElementById('events-services')).top - 60;
+    reviews = getOffset(document.getElementById('reviews')).top - 60;
+    gallery = getOffset(document.getElementById('gallery')).top - 60;
+    contact = getOffset(document.getElementById('contact')).top - 60;
   }
 
   render() {
     return (
       <nav className="navigation">
         <MediaQuery query="(max-width: 767px)">
-          <Menu items={["services", "reviews", "gallery", "contact"]} className="menu-items" onClick={this._handleMenuClick} />
+          <Menu items={["services", "reviews", "gallery", "contact"]} className="menu-items" onClick={this._handleMenuClick} currentNav={this.state.activeClass} />
         </MediaQuery>
         <MediaQuery query="(min-width: 768px)">
-          <Menu items={[SERVICESNAV, "reviews", "gallery", "contact"]} className="menu-items" onClick={this._handleMenuClick} />
+          <Menu items={[SERVICESNAV, "reviews", "gallery", "contact"]} className="menu-items" onClick={this._handleMenuClick} currentNav={this.state.activeClass} />
         </MediaQuery>
       </nav>
     );

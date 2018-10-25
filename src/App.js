@@ -46,6 +46,8 @@ class App extends Component {
               <iframe src="https://hello.dubsado.com:443/public/form/view/5b98038e2e388126ea2c13ae" frameBorder={0} width="100%" height={750} />
             </div>
           </section>
+          <section id="footer">
+          </section>
         </main>
       </div>
     );
