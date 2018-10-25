@@ -40,10 +40,10 @@ class Nav extends Component {
     window.addEventListener('scroll', (event) => {
       console.log(window.scrollY);
       switch(window.scrollY) {
-        case 714:
+        case events:
             highlightMenuItem = 'foo'
             break;
-        case 2500:
+        case reviews:
             highlightMenuItem = 'bar'
             break;
         default:
