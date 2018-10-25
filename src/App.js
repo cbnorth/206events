@@ -5,6 +5,7 @@ import './settings/slider.scss';
 
 import Header from './components/Header';
 import Services from './components/Services';
+import Events from './components/Events';
 import Reviews from './components/Reviews';
 import Awards from './components/Awards';
 import Gallery from './components/Gallery';
@@ -14,15 +15,20 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <main>
+        <main className="main">
           <section id="about">
             <article className="content-container two-column-text">
               <p>206 Events is a Production and Entertainment Company serving the Greater Puget Sound Area. Providing award winning show management, disc jockey and emcee services, and lighting design to create spectacular weddings, corporate galas, holiday celebrations, and parties for all occassions.</p><p> With over two decades of experience, 206 Events will guarantee your guests have a time to remember. Our team of professionals are highly committed to customer service and will work with you to create spectacular and professional results. Let 206 Events create the solution for your next event!</p>
             </article>
           </section>
-          <section id="services" className="dark-background no-padding">
+          <section id="events-services" className="med-background">
             <article className="content-container">
               <Services />
+            </article>
+          </section>
+          <section className="dark-background no-padding">
+            <article className="content-container">
+              <Events />
             </article>
           </section>
           <section id="reviews">

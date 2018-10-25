@@ -7,7 +7,6 @@ export default class Reviews extends Component {
         const settings = {
             infinite: true,
             speed: 500,
-            infinite: true,
             dots: true,
             responsive: [
                 {

@@ -1,19 +1,36 @@
 @import '../../settings/mixins';
 
 @keyframes panAndZoom {
-    100% {
-        background-size: 128%;
-    }
+    0%   { transform: translateX(-50px) translateY(-50px) scale(1);}
+    100% { transform: translateX(50px) translateY(50px) scale(1.2);}
   }
 
 
 .header {
-    background-color: blue;
+    background-color: #000;
     color: #fff;
     position: relative;
-    background-size: 100%;
-    background-image: url(../../images/lockup.jpg);
-    animation: panAndZoom 60s infinite;
+    overflow: hidden;
+}
+
+.header-background-image {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-size: cover;
+
+    &.active {
+        opacity: 1;
+        transition: opacity .5s ease-in-out;
+        animation: panAndZoom 60s infinite;
+        animation-timing-function: linear;
+    }
+
+    &.inactive {
+        opacity: 0;
+    }
 }
 
 .logo {
@@ -21,6 +38,16 @@
     height: 300px;
     background-color:rgba(14, 18, 31, .75);
     margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+
+    img {
+        width: 143px;
+    }
 
     @include breakpoint(sm) {
         height: 375px;

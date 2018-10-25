@@ -1,0 +1,57 @@
+@import '../../settings/mixins';
+
+.event {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    @include breakpoint(sm) {
+        flex-direction: row;
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+	}
+}
+
+.event-copy, .event-image {
+    width: 100%;
+    @include breakpoint(sm) {
+        width: 50%;
+	}
+}
+
+.event-copy {
+    h3 {
+        width: 100%;
+        padding-left: 20px;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.event-two-column-text {
+    p {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+
+    @include breakpoint(med) {
+        display: flex;
+        flex-wrap: wrap;
+        p {
+            display: inline-block;
+            width: 50%;
+            padding: 0 20px;
+            font-size: 15px;
+        }
+        p:nth-child(2) {
+            display: inline-block;
+        }
+    }
+}
+.event-image {
+    img {
+        width: 100%;
+        padding: 0;
+    }
+}

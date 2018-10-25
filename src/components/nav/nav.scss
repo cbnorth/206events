@@ -4,7 +4,6 @@
     background-color: $dark-background;
     color: #fff;
     width: 100%;
-    padding: 15px 0;
 }
 
 .sticky {
@@ -17,14 +16,23 @@
         justify-content: space-evenly;
         max-width: 800px;
         margin: auto;
+        height: 35px;
+        align-items: center;
+        @include breakpoint(sm) {
+            height: 60px;
+        }
     }
     a {
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
+        font-family: $secondary-font;
+        font-weight: 400;
+        transform: translateY(1px);
 
         @include breakpoint(sm) {
             font-size: 20px;
+            font-weight: 700;
         }
 
         &.current {
