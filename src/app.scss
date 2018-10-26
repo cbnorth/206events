@@ -1,5 +1,10 @@
 @import "./settings/settings";
 
+
+body {
+    overflow-x: hidden;
+}
+
 section {
     padding: 40px 0;
     color: $dark-font-color;
@@ -67,8 +72,4 @@ section {
     h1 {
         text-align: center;
     }
-}
-
-#footer {
-    height: 500px;
 }

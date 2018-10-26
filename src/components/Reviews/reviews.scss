@@ -1,6 +1,15 @@
 @import '../../settings/mixins';
 
+.reviews {
+    h1 {
+        text-align: center;
+    }
+}
+
 .review {
+    a {
+        color: #000;
+    }
     em {
         padding: 20px 0;
         display: inline-block;

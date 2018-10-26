@@ -10,7 +10,7 @@ const Menu = ({ items, className, onClick, currentNav }) => (
   <div className={className}>
     {items.map((item, i) => {
       let navItem = (item === SERVICESNAV || item === "services") ? "events-services" : item;
-      return <AnchorLink className={currentNav === navItem && "current"} href={`#${navItem}`} key={i} onClick={onClick} offset='50'>{item}</AnchorLink>
+      return <AnchorLink className={currentNav === navItem ? "nav-item current" : "nav-item"} href={`#${navItem}`} key={i} onClick={onClick} offset='50'>{item}</AnchorLink>
     })
     }
   </div >
@@ -38,9 +38,8 @@ class Nav extends Component {
   }
   componentDidMount() {
     let highlightMenuItem;
-    this.getOffsets();
     window.addEventListener("resize", this.getOffsets);
-    window.addEventListener('scroll', (event) => {
+    window.addEventListener('scroll', () => {
       if (window.scrollY >= events && window.scrollY < reviews) {
         highlightMenuItem = "events-services"
       } else if (window.scrollY >= reviews && window.scrollY < gallery) {
@@ -49,6 +48,8 @@ class Nav extends Component {
         highlightMenuItem = "gallery"
       } else if (window.scrollY > contact) {
         highlightMenuItem = "contact"
+      } else {
+        highlightMenuItem = null
       }
       this.setState({
         activeClass: highlightMenuItem,
@@ -62,6 +63,7 @@ class Nav extends Component {
   }
 
   getOffsets = () => {
+    // TODO: simplify and DRY this logic
     events = getOffset(document.getElementById('events-services')).top - 60;
     reviews = getOffset(document.getElementById('reviews')).top - 60;
     gallery = getOffset(document.getElementById('gallery')).top - 60;
@@ -69,6 +71,7 @@ class Nav extends Component {
   }
 
   render() {
+    this.getOffsets();
     return (
       <nav className="navigation">
         <MediaQuery query="(max-width: 767px)">

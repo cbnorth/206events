@@ -1,8 +1,24 @@
 @import '../../settings/mixins';
+.gallery {
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
+    .slick-slider {
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .slick-dots li button:before {
+        color: #fff;
+        font-size: 35px;
+    }
+}
 .slide {
-    height: 250px;
+    height: 400px;
     @include breakpoint(med) {
-        height: 500px;
+        height: 600px;
 	}
 }

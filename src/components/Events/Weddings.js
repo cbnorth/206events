@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Reveal from 'react-reveal/Fade';
 
+import weddings from '../../images/events/206-weddings.jpg';
+
 class Weddings extends Component {
     render() {
         return (
@@ -14,7 +16,7 @@ class Weddings extends Component {
                         </div>
                     </div>
                     <div className="event-image">
-                        <img src="https://www.petmd.com/sites/default/files/small-kitten-walking-towards_127900829_0.jpg" alt="206 Events does sound, lighting and event coordination for wedding and other events" />
+                        <img src={weddings} alt="206 Events does sound, lighting and event coordination for wedding and other events" />
                     </div>
                 </Reveal>
             </div>

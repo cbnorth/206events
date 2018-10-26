@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './events.scss';
 
-import ServiceParties from './ServiceParties.js';
 import Weddings from './Weddings.js';
-import ServiceLighting from './ServiceLighting.js';
+import PrivateParties from './PrivateParties';
+import CorporateEvents from './CorporateEvents.js';
 import MediaQuery from 'react-responsive'
 import Slider from "react-slick";
 
@@ -14,7 +14,6 @@ class Events extends Component {
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            infinite: true,
             dots: true,
         };
 
@@ -23,14 +22,14 @@ class Events extends Component {
                 <MediaQuery query="(max-width: 767px)">
                     <Slider {...settings}>
                         <Weddings />
-                        <ServiceLighting />
-                        <ServiceParties />
+                        <CorporateEvents />
+                        <PrivateParties />
                     </Slider>
                 </MediaQuery>
                 <MediaQuery query="(min-width: 768px)">
                     <Weddings />
-                    <ServiceLighting />
-                    <ServiceParties />
+                    <CorporateEvents />
+                    <PrivateParties />
                 </MediaQuery>
             </div>
         );

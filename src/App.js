@@ -9,6 +9,7 @@ import Events from './components/Events';
 import Reviews from './components/Reviews';
 import Awards from './components/Awards';
 import Gallery from './components/Gallery';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -43,10 +44,11 @@ class App extends Component {
           <section id="contact">
             <div className="contact content-container">
               <h1>Contact us for pricing and availability</h1>
-              <iframe src="https://hello.dubsado.com:443/public/form/view/5b98038e2e388126ea2c13ae" frameBorder={0} width="100%" height={750} />
+              <iframe src="https://hello.dubsado.com:443/public/form/view/5b98038e2e388126ea2c13ae" frameBorder={0} width="100%" height={750} title="contact 206 events"/>
             </div>
           </section>
           <section id="footer">
+            <Footer />
           </section>
         </main>
       </div>

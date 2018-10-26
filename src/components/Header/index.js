@@ -95,8 +95,6 @@ class Header extends Component {
             'inactive': !this.state.foobar,
         });
 
-        console.log(this.state.foobar);
-
         let nextClass = classNames({
             'header-background-image': true,
             //if even

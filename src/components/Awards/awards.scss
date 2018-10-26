@@ -1,19 +1,15 @@
 @import '../../settings/mixins';
 
-.service {
+.awards-images {
     display: flex;
-    flex-direction: column-reverse;
-    @include breakpoint(med) {
-        flex-direction: row;
-        &:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-	}
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 650px;
+    margin: auto;
 }
 
-.service-copy, .service-image {
-    width: 100%;
-    @include breakpoint(med) {
-        width: 50%;
-	}
+.wedding-wire-award {
+    width: 18%;
+    max-width: 124px;
 }

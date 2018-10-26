@@ -1,0 +1,85 @@
+@import '../../settings/settings';
+
+#footer {
+    background-color: $dark-background;
+}
+
+.footer {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include breakpoint(sm) {
+        flex-direction: row;
+    }
+}
+
+.footer-owner-higlight {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include breakpoint(sm) {
+        margin-bottom: 0;
+    }
+
+    img {
+        width: 150px;
+    }
+
+    .contact-206-events {
+        margin-left: 20px;
+        p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 14px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    img {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+    color: #fff;
+    text-decoration: none;
+
+    @include breakpoint(sm) {
+        font-size: 16px;
+        img {
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+.copyright {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+
+    @include breakpoint(sm) {
+        text-align: right;
+    }
+}
