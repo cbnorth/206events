@@ -9,41 +9,70 @@
 
 
 .services-list {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 50px auto 0 auto;
-    align-items: baseline;
-    img {
-        display: block;
-        margin: auto;
-        padding-bottom: 15px;
-    }
+    margin: 50px 30px 0 30px;
+
     li {
         list-style: none;
         font-family: $secondary-font;
-        text-align: center;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    img {
+        max-height: 30px;
+        padding-right: 15px;
+        position: relative;
+        top: 9px;
+    }
+
+    @include breakpoint(sm) {
+        li {
+            width: 45%;
+            display: inline-block;
+        }
+    }
+
+    @include breakpoint(med) {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        max-width: 1000px;
+        margin: 50px auto 0 auto;
+
+        img {
+            display: block;
+            margin: auto;
+            padding-bottom: 15px;
+            max-height: none;
+            position: static;
+        }
+
+        li {
+            text-align: center;
+        }
     }
 }
 
-.eventProduction {
-    width: 34px;
-}
-.DJEmcee {
-    width: 41px;
-}
-.soundSystem {
-    width: 69px;
-}
-.lightingDesign {
-    width: 48px;
-}
-.entertainment {
-    width: 61px;
-}
-.timeManagement {
-    width: 36px;
-}
-.eventDesign {
-    width: 60px;
+@include breakpoint(med) {
+    .eventProduction {
+        width: 34px;
+    }
+    .DJEmcee {
+        width: 41px;
+    }
+    .soundSystem {
+        width: 69px;
+    }
+    .lightingDesign {
+        width: 48px;
+    }
+    .entertainment {
+        width: 61px;
+    }
+    .timeManagement {
+        width: 36px;
+    }
+    .eventDesign {
+        width: 60px;
+    }
 }
