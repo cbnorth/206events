@@ -2,7 +2,13 @@
   $xs: 375px;
   $sm: 768px;
   $med: 1024px;
-  $lg: 1440px;
+  $lg: 1320px;
+
+	@if $break == xs {
+		@media (min-width: $xs) {
+			@content;
+		}
+	}
 
 	@if $break == sm {
 		@media (min-width: $sm) {

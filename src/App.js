@@ -19,7 +19,7 @@ class App extends Component {
         <main className="main">
           <section id="about">
             <article className="content-container two-column-text">
-              <p>206 Events is a Production and Entertainment Company serving the Greater Puget Sound Area. Providing award winning show management, disc jockey and emcee services, and lighting design to create spectacular weddings, corporate galas, holiday celebrations, and parties for all occassions.</p><p> With over two decades of experience, 206 Events will guarantee your guests have a time to remember. Our team of professionals are highly committed to customer service and will work with you to create spectacular and professional results. Let 206 Events create the solution for your next event!</p>
+              <p>206 Events is a Production and Entertainment Company providing A/V Services around the Greater Puget Sound Area. Offering award-winning Show Management, DJ and Emcee Talent, Performance Entertainment, Custom Lighting Design, and Professional Audio Installations to create spectacular Corporate Galas, Holiday Celebrations, Weddings and Parties for all Occasions. </p><p> With over two decades of experience, our team of professionals at 206 Events will work to bring your vision to life!  Meticulously executing details and seamlessly integrating our decor and AV elements to create a truly memorable experience for your guests.  Contact us and let’s get the planning process started today!</p>
             </article>
           </section>
           <section id="events-services" className="med-background">

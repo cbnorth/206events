@@ -4,12 +4,15 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 // import Scrollspy from 'react-scrollspy';
 import MediaQuery from 'react-responsive'
 
-const SERVICESNAV = "services & events"
+const SERVICESNAV = "services"
 
 const Menu = ({ items, className, onClick, currentNav }) => (
   <div className={className}>
     {items.map((item, i) => {
       let navItem = (item === SERVICESNAV || item === "services") ? "events-services" : item;
+      if (item === "portal") {
+        return <a href="https://hello.dubsado.com:443/public/client/portal/5b98038e2e388126ea2c13aa" className="nav-item" target="blank">{item}</a>
+      }
       return <AnchorLink className={currentNav === navItem ? "nav-item current" : "nav-item"} href={`#${navItem}`} key={i} onClick={onClick} offset='50'>{item}</AnchorLink>
     })
     }
@@ -75,10 +78,10 @@ class Nav extends Component {
     return (
       <nav className="navigation">
         <MediaQuery query="(max-width: 767px)">
-          <Menu items={["services", "reviews", "gallery", "contact"]} className="menu-items" onClick={this._handleMenuClick} currentNav={this.state.activeClass} />
+          <Menu items={["services", "gallery", "contact", "portal"]} className="menu-items" onClick={this._handleMenuClick} currentNav={this.state.activeClass} />
         </MediaQuery>
         <MediaQuery query="(min-width: 768px)">
-          <Menu items={[SERVICESNAV, "reviews", "gallery", "contact"]} className="menu-items" onClick={this._handleMenuClick} currentNav={this.state.activeClass} />
+          <Menu items={[SERVICESNAV, "reviews", "gallery", "contact", "portal"]} className="menu-items" onClick={this._handleMenuClick} currentNav={this.state.activeClass} />
         </MediaQuery>
       </nav>
     );

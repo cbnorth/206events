@@ -11,12 +11,13 @@ class PrivateParties extends Component {
                     <div className="event-copy">
                         <h3>Private Parties</h3>
                         <div className="event-two-column-text">
-                            <p>Ambiance: the mood, character, quality, tone, atmosphere, particularly of an environment.  Nothing says ambiance like music and lighting! From simple elegance to over-the-top "wow", we can help you achieve exactly the right feel for your event.  </p>
-                            <p>Architectural up-lighting, texture lighting to broadcast patterns on walls or ceilings, custom signature name spotlights or highlights to accent your cake or floral arrangements—206 Events can transform your event space and help create your dreams!</p>
+                            <p>Holiday parties, birthdays, presentations, mitzvahs, corporate events, school functions, auctions, & more...</p>
+                            <p>206 Events will help you enhance any party! We can provide background music for dinners and cocktail parties, audio/visual support for meetings and presentations, dance parties for holiday celebrations and birthdays, and everything in between. We know every event is better with great music and we want to help you throw the kind of party that your guests deserve.</p>
+
                         </div>
                     </div>
                     <div className="event-image">
-                        <img src={parties} alt="" />
+                        <img src={parties} alt="206 events can help with your private party" />
                     </div>
                 </Reveal>
             </div>

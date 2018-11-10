@@ -4,9 +4,34 @@
     h1 {
         text-align: center;
     }
+
+    .slick-next {
+        right: 25%;
+        top: auto;
+        bottom: -11px;
+
+        @include breakpoint(sm) {
+            top: 50%;
+            right: 20px;
+            bottom: auto;
+        }
+    }
+
+    .slick-prev {
+        left: 25%;
+        top: auto;
+        bottom: -11px;
+
+        @include breakpoint(sm) {
+            top: 50%;
+            left: 20px;
+            bottom: auto;
+        }
+    }
 }
 
-.review {
+p.review {
+    padding-bottom: 0;
     a {
         color: #000;
     }

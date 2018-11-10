@@ -22,7 +22,7 @@ export default class Reviews extends Component {
 
         return (
             <div className="reviews content-container centered-text">
-                <h1>What clients say bbout us</h1>
+                <h1>What clients say about us</h1>
                 <Slider {...settings}>
                     <div>
                         <p className="review">I can't say enough wonderful things about 206 Events!  Troy is the most amazing combination of personable and professional. With attention to detail, flexibility and the ability to understand the needs of a group, we could not have been more impressed with Troy as a DJ and essentially facilitator for our wedding and reception... I truly did not have to think about what came next and was able to enjoy every minute of the wedding as a result. Thank you for your genuine care for us, and for showing us and our guests an amazing time! <br />

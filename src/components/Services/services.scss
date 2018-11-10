@@ -5,11 +5,22 @@
         font-size: 36px;
         text-align: center;
     }
+
+    h2 {
+        display: none;
+
+        @include breakpoint(med) {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 15px;
+            display: block;
+        }
+    }
 }
 
 
 .services-list {
-    margin: 50px 30px 0 30px;
+    margin: 30px 30px 0 30px;
 
     li {
         list-style: none;
@@ -43,6 +54,7 @@
             display: block;
             margin: auto;
             padding-bottom: 15px;
+            padding-right: 0;
             max-height: none;
             position: static;
         }
