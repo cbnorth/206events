@@ -6,6 +6,7 @@ import troy from '../../images/footer/206-footer-image.jpg';
 import weddingwire from '../../images/footer/WeddingWire-icon.png';
 import facebook from '../../images/footer/Facebook-icon.png';
 import yelp from '../../images/footer/Yelp-icon.png';
+import instagram from '../../images/footer/Instagram-icon.png';
 
 const SocialLink = ({link, imageSource, altText, title}) => (
     <a href={link} target="_blank" rel="noopener noreferrer" className="social-link">
@@ -46,7 +47,7 @@ class Footer extends Component {
                         />
                         <SocialLink
                             link="https://www.instagram.com/206_events/"
-                            imageSource={weddingwire}
+                            imageSource={instagram}
                             altText="206 events on instagram"
                             title="Instagram"
                         />
