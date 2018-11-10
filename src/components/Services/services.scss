@@ -43,12 +43,18 @@
             display: block;
             margin: auto;
             padding-bottom: 15px;
+            padding-right: 0;
             max-height: none;
             position: static;
         }
 
         li {
             text-align: center;
+        }
+
+        .break:before {
+            content: "\A";
+            white-space: pre;
         }
     }
 }

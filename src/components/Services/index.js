@@ -17,7 +17,7 @@ class Services extends Component {
                 <ul className="services-list">
                     <li>
                         <img src={eventProduction} alt="206 events does Event Production" className="eventProduction"/>
-                        Event Production
+                        Event <span className="break">Production</span>
                     </li>
                     <li>
                         <img src={DJEmcee} alt="206 events provides DJ &amp; Emcee services for your events" className="DJEmcee"/>
@@ -25,11 +25,11 @@ class Services extends Component {
                     </li>
                     <li>
                         <img src={soundSystem} alt="206 events can provide A/V Support &amp; Sound System design" className="soundSystem"/>
-                        A/V Support &amp; Sound Systems
+                        Audio-Visual Systems
                     </li>
                     <li>
                         <img src={lightingDesign} alt="206 events specializes in lighting design for events big and small" className="lightingDesign"/>
-                        Lighting Design
+                        Lighting <span className="break">Design</span>
                     </li>
                     <li>
                         <img src={entertainment} alt="206 events pays attention to the smallest of details and helps design all of your entertainment elements" className="entertainment"/>
