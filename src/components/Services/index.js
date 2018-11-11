@@ -33,10 +33,6 @@ class Services extends Component {
                         Lighting <span className="break">Design</span>
                     </li>
                     <li>
-                        <img src={soundSystem} alt="206 events can provide A/V Support &amp; Sound System design" className="soundSystem"/>
-                        A/V Support &amp; Sound Systems
-                    </li>
-                    <li>
                         <img src={entertainment} alt="206 events pays attention to the smallest of details and helps design all of your entertainment elements" className="entertainment"/>
                         Performance Entertainment
                     </li>

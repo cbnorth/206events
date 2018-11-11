@@ -40,7 +40,7 @@ class Footer extends Component {
                             title="Yelp"
                         />
                         <SocialLink
-                            link="https://www.weddingwire.com/biz/206-events-seattle/430f0084a64cd9f0.html"
+                            link="https://www.facebook.com/206eventsdj/"
                             imageSource={facebook}
                             altText="206 events on facebook"
                             title="Facebook"
