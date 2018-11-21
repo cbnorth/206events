@@ -24,8 +24,11 @@ import gallery18 from '../../images/gallery/206-gallery18.jpg';
 import gallery19 from '../../images/gallery/206-gallery19.jpg';
 import gallery20 from '../../images/gallery/206-gallery20.jpg';
 import gallery21 from '../../images/gallery/206-gallery21.jpg';
+import gallery22 from '../../images/gallery/206-gallery22.jpg';
+import gallery23 from '../../images/gallery/206-gallery23.jpg';
+import gallery24 from '../../images/gallery/206-gallery24.jpg';
 
-const slides = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15, gallery16, gallery17, gallery18, gallery19, gallery20, gallery21];
+const slides = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15, gallery16, gallery17, gallery18, gallery19, gallery20, gallery21, gallery22, gallery23, gallery24];
 
 class Gallery extends Component {
     render() {
@@ -47,7 +50,7 @@ class Gallery extends Component {
         };
 
         const galleryItems = slides.map(function(slide, i){
-            return <div className="slide"><img src={slide} key={i} alt="" /></div>
+            return <div className="slide" key={i}><img src={slide} key={i} alt="" /></div>
         });
 
         //TODO: loop create slides from array

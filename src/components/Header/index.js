@@ -47,36 +47,43 @@ class Header extends Component {
     render() {
         let currentLockup;
         let nextLockup;
+        let loadNext;
 
         switch (this.state.currentCount) {
             //odd
             case 1:
                 currentLockup = background1;
                 nextLockup = background1;
+                loadNext = background2;
                 break;
             //even
             case 2:
                 currentLockup = background2;
                 nextLockup = background2;
+                loadNext = background3;
                 break;
             //odd
             case 3:
                 currentLockup = background3;
                 nextLockup = background3;
+                loadNext = background4;
                 break;
             //even
             case 4:
                 currentLockup = background4;
                 nextLockup = background4;
+                loadNext = background5;
                 break;
             //odd
             case 5:
                 currentLockup = background5;
                 nextLockup = background5;
+                loadNext = background1;
                 break;
             default:
                 currentLockup = background1;
                 nextLockup = background2;
+                loadNext = background3;
         }
 
         const currentLockupStyle = {
@@ -85,6 +92,11 @@ class Header extends Component {
 
         const nextLockupStyle = {
             backgroundImage: `url(${nextLockup})`,
+        };
+
+        const preLoadStyle = {
+            backgroundImage: `url(${loadNext})`,
+            display: `none`,
         };
 
         let currentClass = classNames({
@@ -103,10 +115,12 @@ class Header extends Component {
             'inactive': this.state.foobar,
         });
 
+
         return (
             <header className="header">
                 <div className={currentClass} role="presentation" tabIndex="-1" style={currentLockupStyle}></div>
                 <div className={nextClass} role="presentation" tabIndex="-1" style={nextLockupStyle}></div>
+                <div role="presentation" tabIndex="-1" style={preLoadStyle}></div>
                 <div className="logo"><img src={logo} alt="206 Events logo" /></div>
                 <Sticky>
                     <Nav />

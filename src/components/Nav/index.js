@@ -11,7 +11,7 @@ const Menu = ({ items, className, onClick, currentNav }) => (
     {items.map((item, i) => {
       let navItem = (item === SERVICESNAV || item === "services") ? "events-services" : item;
       if (item === "portal") {
-        return <a href="https://hello.dubsado.com:443/public/client/portal/5b98038e2e388126ea2c13aa" className="nav-item" target="blank">{item}</a>
+        return <a href="https://hello.dubsado.com:443/public/client/portal/5b98038e2e388126ea2c13aa" className="nav-item" target="blank" key={i}>{item}</a>
       }
       return <AnchorLink className={currentNav === navItem ? "nav-item current" : "nav-item"} href={`#${navItem}`} key={i} onClick={onClick} offset='50'>{item}</AnchorLink>
     })
