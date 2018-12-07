@@ -21,6 +21,10 @@ class App extends Component {
             <article className="content-container two-column-text">
               <p>206 Events is a Production and Entertainment Company providing A/V Services around the Greater Puget Sound Area. Offering award-winning Show Management, DJ and Emcee Talent, Performance Entertainment, Custom Lighting Design, and Professional Audio Installations to create spectacular Corporate Galas, Holiday Celebrations, Weddings and Parties for all Occasions. </p><p> With over two decades of experience, our team of professionals at 206 Events will work to bring your vision to life!  Meticulously executing details and seamlessly integrating our decor and AV elements to create a truly memorable experience for your guests.  Contact us and let’s get the planning process started today!</p>
             </article>
+            <div className="videoContainer">
+                <div className="embed-container"><iframe src="https://player.vimeo.com/video/304889534" frameBorder={0} webkitallowfullscreen mozallowfullscreen allowFullScreen /></div>
+                <div className="embed-container"><iframe src="https://player.vimeo.com/video/303601824" frameBorder={0} webkitallowfullscreen mozallowfullscreen allowFullScreen /></div>
+            </div>
           </section>
           <section id="events-services" className="med-background">
             <article className="content-container">
