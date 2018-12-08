@@ -73,19 +73,33 @@ section {
     }
 }
 .videoContainer {
-    display: flex;
     margin: 40px 0;
     justify-content: space-around;
-    width: 80%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 10px;
+
+    @include breakpoint (med) {
+        display: flex;
+        width: 80%;
+        margin: 0 10%;
+        padding: 0l
+    }
 }
 
 .embed-container {
     position: relative;
-    padding-bottom: 22.25%;
+    padding-bottom: 44.25%;
     height: 0;
     overflow: hidden;
-    width: 45%;
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include breakpoint(med) {
+        width: 45%;
+        padding-bottom: 22.25%;
+        margin-bottom: 0;
+    }
 }
 .embed-container iframe,
 .embed-container object,
