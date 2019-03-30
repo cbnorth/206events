@@ -3,32 +3,27 @@ import './gallery.scss';
 
 import Slider from "react-slick";
 
-import gallery1 from '../../images/gallery/206-gallery01.jpg';
 import gallery2 from '../../images/gallery/206-gallery02.jpg';
 import gallery3 from '../../images/gallery/206-gallery03.jpg';
 import gallery4 from '../../images/gallery/206-gallery04.jpg';
 import gallery5 from '../../images/gallery/206-gallery05.jpg';
 import gallery6 from '../../images/gallery/206-gallery06.jpg';
-import gallery7 from '../../images/gallery/206-gallery07.jpg';
-import gallery8 from '../../images/gallery/206-gallery08.jpg';
-import gallery9 from '../../images/gallery/206-gallery09.jpg';
 import gallery10 from '../../images/gallery/206-gallery10.jpg';
-import gallery11 from '../../images/gallery/206-gallery11.jpg';
-import gallery12 from '../../images/gallery/206-gallery12.jpg';
-import gallery13 from '../../images/gallery/206-gallery13.jpg';
-import gallery14 from '../../images/gallery/206-gallery14.jpg';
-import gallery15 from '../../images/gallery/206-gallery15.jpg';
 import gallery16 from '../../images/gallery/206-gallery16.jpg';
-import gallery17 from '../../images/gallery/206-gallery17.jpg';
 import gallery18 from '../../images/gallery/206-gallery18.jpg';
-import gallery19 from '../../images/gallery/206-gallery19.jpg';
 import gallery20 from '../../images/gallery/206-gallery20.jpg';
 import gallery21 from '../../images/gallery/206-gallery21.jpg';
 import gallery22 from '../../images/gallery/206-gallery22.jpg';
 import gallery23 from '../../images/gallery/206-gallery23.jpg';
 import gallery24 from '../../images/gallery/206-gallery24.jpg';
+import gallery25 from '../../images/gallery/annbri_alante_LC2_1912.jpg';
+import gallery26 from '../../images/gallery/sardar_alante__C2_0362.jpg';
+import gallery27 from '../../images/gallery/sardar_alante__C2_0766.jpg';
+import gallery28 from '../../images/gallery/sardar_alante__P2_9161.jpg';
+import gallery29 from '../../images/gallery/sardar_alante_KP1_8954.jpg';
 
-const slides = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15, gallery16, gallery17, gallery18, gallery19, gallery20, gallery21, gallery22, gallery23, gallery24];
+
+const slides = [gallery2, gallery3, gallery4, gallery5, gallery6, gallery26, gallery29, gallery28, gallery10, gallery25, gallery27, gallery16, gallery18, gallery20, gallery21, gallery22, gallery23, gallery24];
 
 class Gallery extends Component {
     render() {
@@ -53,13 +48,23 @@ class Gallery extends Component {
             return <div className="slide" key={i}><img src={slide} key={i} alt="" /></div>
         });
 
-        //TODO: loop create slides from array
         return (
             <div className="gallery content-container">
                 <h1>Gallery</h1>
                 <Slider {...settings}>
                     {galleryItems}
                 </Slider>
+                <div className="photographer-credits">
+                    <h3>Photographer credits</h3>
+                    <div className="photographer-credits-wrapper">
+                        <a href="https://www.hazelmariephoto.com/" target="_blank">Hazel Marie Photo</a>
+                        <a href="https://www.AlantePhotography.com" target="_blank">Alante Photography</a>
+                        <a href="https://www.carolharroldphotography.com/" target="_blank">Carol Harrold Photography</a>
+                        <a href="http://www.carinaskrobecki.com/" target="_blank">Carina Skrobecki Photography</a>
+                        <a href="https://www.maxandsamphoto.com" target="_blank">Max &amp; Sam Photography</a>
+                        <a href="https://www.Sashareiko.com" target="_blank">Sasha Reiko</a>
+                    </div>
+                </div>
             </div>
         );
     }

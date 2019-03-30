@@ -12,6 +12,7 @@ import background2 from '../../images/header/206-header2.jpg';
 import background3 from '../../images/header/206-header3.jpg';
 import background4 from '../../images/header/206-header4.jpg';
 import background5 from '../../images/header/206-header5.jpg';
+import background6 from '../../images/header/206-header6.jpg';
 
 class Header extends Component {
     constructor(props) {
@@ -37,7 +38,7 @@ class Header extends Component {
 
     timer = () => {
         // setState method is used to update the state
-        const newState  = this.state.currentCount === 5 ? 1 : this.state.currentCount + 1;
+        const newState  = this.state.currentCount === 6 ? 1 : this.state.currentCount + 1;
         this.setState({
             foobar: !this.state.foobar,
             currentCount: newState,
@@ -78,6 +79,12 @@ class Header extends Component {
             case 5:
                 currentLockup = background5;
                 nextLockup = background5;
+                loadNext = background6;
+                break;
+            //even
+            case 6:
+                currentLockup = background6;
+                nextLockup = background6;
                 loadNext = background1;
                 break;
             default:

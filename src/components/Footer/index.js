@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 import './footer.scss';
 
-import troy from '../../images/footer/206-footer-image.jpg';
+import troy from '../../images/footer/206-footer-image-color.jpg';
 import weddingwire from '../../images/footer/WeddingWire-icon.png';
 import facebook from '../../images/footer/Facebook-icon.png';
 import yelp from '../../images/footer/Yelp-icon.png';
 import instagram from '../../images/footer/Instagram-icon.png';
 
-const SocialLink = ({link, imageSource, altText, title}) => (
+export const SocialLink = ({link, imageSource, altText, title}) => (
     <a href={link} target="_blank" rel="noopener noreferrer" className="social-link">
         <img src={imageSource} alt={altText} />
         <span>{title}</span>

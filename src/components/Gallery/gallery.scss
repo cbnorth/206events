@@ -58,3 +58,26 @@
         height: 600px;
 	}
 }
+
+.photographer-credits {
+    max-width: 800px;
+    padding: 0 20px;
+    margin: 55px auto 0 auto;
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
+
+    .photographer-credits-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    a {
+        color: #fff;
+        margin-right: 15px;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+}
